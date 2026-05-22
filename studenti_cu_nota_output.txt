@@ -1,0 +1,3 @@
+201,Alexandru,Ionescu,TI21/1,9.5
+202,Elena,Vasilescu,TI21/2,10.0
+203,Cristian,Marin,TI22/1,7.25
