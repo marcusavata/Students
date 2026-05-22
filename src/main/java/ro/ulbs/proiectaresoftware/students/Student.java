@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.ArrayList;
 
 public class Student {
+    //Lab1
     protected int numarMatricol;
     protected String prenume;
     protected String nume;
@@ -37,7 +38,7 @@ public class Student {
         return String.format("%-5d | %-15s | %-15s | %-10s",
                 numarMatricol, prenume, nume, formatieDeStudiu);
     }
-
+    //Lab2
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;

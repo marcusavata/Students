@@ -7,8 +7,11 @@ import java.util.Comparator;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Map;
+import java.util.HashMap;
 
 public static void main() {
+    //Lab1
     Student s1 = new Student(112, "Ioan", "Popa", "C21/1");
     Student s2 = new Student(112, "Maria", "Oprea", "C23/2");
     Student s3 = new Student(120, "Andrei", "Ghita", "C21/2");
@@ -20,6 +23,7 @@ public static void main() {
     //System.out.println(s4.toString());
     //System.out.println(s5.toString());
 
+    //Lab2
     ArrayList<Student> listaStudenti = new ArrayList<>();
     listaStudenti.add(s1);
     listaStudenti.add(s2);
@@ -37,6 +41,7 @@ public static void main() {
     System.out.println("E Andrei prezent? " + s3.studentPrezent(listaStudenti));
     System.out.println("E Ioana prezenta? " + s5.studentPrezentSet(setStudenti));
 
+    //Lab3
     System.out.println("Lista initiala");
     for (Student s : listaStudenti) {
         System.out.println(s);
@@ -55,7 +60,17 @@ public static void main() {
     }
     System.out.println("\nGenerare fisier");
     outputStudentList(listaStudenti);
+
+    //Lab4
+    Map<Student, Integer> noteStudenti = new HashMap<>();
+    noteStudenti.put(s1, 3);
+    noteStudenti.put(s2, 9);
+    noteStudenti.put(s3, 5);
+
+    System.out.println("Nota lui " + s1.getPrenume() + " este "+ notaStudent(s1,noteStudenti));
+    System.out.println("Nota lui " + s4.getPrenume() + " este "+ notaStudent(s4,noteStudenti));
 }
+    //Lab3
     public static List<Student> sorteazaNume (List < Student > listaStudenti) {
         List<Student> listaSortataNume = new ArrayList<>(listaStudenti);
         listaSortataNume.sort(Comparator.comparing(Student::getNume));
@@ -79,5 +94,9 @@ public static void main() {
         System.out.println("Eroare la scrierea in fisier: " + e.getMessage());
     }
 }
+    //Lab4
+    public static int notaStudent(Student student, Map<Student, Integer> note) {
+    return note.getOrDefault(student, -1);
+    }
 
 
