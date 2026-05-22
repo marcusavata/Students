@@ -24,4 +24,5 @@ public static void main() {
     System.out.println("E Andrei prezent? " + s3.studentPrezent(listaStudenti));
     System.out.println("E Ioana prezenta? " + s5.studentPrezentSet(setStudenti));
 
+    Test
 }
