@@ -10,7 +10,6 @@ public class Application {
 
     public static void main(String[] args) {
 
-        System.out.println("--- 1. TESTARE STUDENTI SIMPLI ---");
         Student s1 = new Student(112, "Ioan", "Popa", "C21/1");
         Student s2 = new Student(112, "Maria", "Oprea", "C23/2");
         Student s3 = new Student(120, "Andrei", "Ghita", "C21/2");
@@ -35,7 +34,6 @@ public class Application {
         setStudenti.add(s2);
         System.out.println("Este Maria in set? " + s2.studentPrezentSet(setStudenti));
         System.out.println("Este Andrei in set? " + s3.studentPrezentSet(setStudenti));
-
 
         System.out.println("Sortare dupa nume:");
         List<Student> sortatiDupaNume = Student.sortByName(listaStudenti);
