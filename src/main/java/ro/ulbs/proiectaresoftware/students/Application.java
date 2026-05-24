@@ -23,7 +23,7 @@ public class Application {
         listaStudenti.add(s4);
         listaStudenti.add(s5);
 
-        System.out.println("--- Lista initiala ---");
+        System.out.println("Lista initiala");
         for (Student s : listaStudenti) {
             System.out.println(s);
         }

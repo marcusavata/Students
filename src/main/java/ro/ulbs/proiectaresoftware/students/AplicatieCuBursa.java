@@ -10,14 +10,14 @@ public class AplicatieCuBursa {
         AplicatieCuBursa instanta = new AplicatieCuBursa();
         List<StudentBursier> lista = instanta.genereaza();
 
-        System.out.println("--- Lista initiala de Bursieri ---");
+        System.out.println("\nLista initiala de Bursieri");
         for (StudentBursier student : lista) {
             System.out.println(student);
         }
 
         System.out.println("\n--------------------------------------------------\n");
 
-        System.out.println("--- Lista sortata de Bursieri ---");
+        System.out.println("Lista sortata de Bursieri");
         List<StudentBursier> sortata = instanta.sorteaza(lista);
         for (StudentBursier student : sortata) {
             System.out.println(student);
