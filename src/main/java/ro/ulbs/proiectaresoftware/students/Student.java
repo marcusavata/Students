@@ -11,10 +11,10 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Student {
-    protected int numarMatricol;
-    protected String prenume;
-    protected String nume;
-    protected String formatieDeStudiu;
+    private final int numarMatricol;
+    private final String prenume;
+    private final String nume;
+    private final String formatieDeStudiu;
 
     public Student(int numarMatricol, String prenume, String nume, String formatieDeStudiu) {
         this.numarMatricol = numarMatricol;
@@ -27,6 +27,27 @@ public class Student {
     public String getPrenume() { return prenume; }
     public String getNume() { return nume; }
     public String getFormatieDeStudiu() { return formatieDeStudiu; }
+
+    public Student schimbaFormatie(String nouaFormatie) {
+        return new Student(this.numarMatricol, this.prenume, this.nume, nouaFormatie);
+    }
+
+    public static List<Student> imparteInFormatiiEgale(List<? extends Student> lista, String f1, String f2) {
+        List<Student> nouaLista = new ArrayList<>();
+        int n = lista.size();
+
+        int mijloc = (n % 2 == 0) ? (n / 2) : (n / 2 + 1);
+
+        for (int i = 0; i < n; i++) {
+            Student studentOriginal = lista.get(i);
+            if (i < mijloc) {
+                nouaLista.add(studentOriginal.schimbaFormatie(f1));
+            } else {
+                nouaLista.add(studentOriginal.schimbaFormatie(f2));
+            }
+        }
+        return nouaLista;
+    }
 
     @Override
     public String toString() {

@@ -23,11 +23,12 @@ public class Application {
         listaStudenti.add(s4);
         listaStudenti.add(s5);
 
+        System.out.println("--- Lista initiala ---");
         for (Student s : listaStudenti) {
             System.out.println(s);
         }
 
-        System.out.println("Este Ioan in lista? " + s1.studentPrezent(listaStudenti));
+        System.out.println("\nEste Ioan in lista? " + s1.studentPrezent(listaStudenti));
 
         HashSet<Student> setStudenti = new HashSet<>();
         setStudenti.add(s1);
@@ -35,7 +36,7 @@ public class Application {
         System.out.println("Este Maria in set? " + s2.studentPrezentSet(setStudenti));
         System.out.println("Este Andrei in set? " + s3.studentPrezentSet(setStudenti));
 
-        System.out.println("Sortare dupa nume:");
+        System.out.println("\nSortare dupa nume:");
         List<Student> sortatiDupaNume = Student.sortByName(listaStudenti);
         sortatiDupaNume.forEach(System.out::println);
 
@@ -70,5 +71,12 @@ public class Application {
 
         System.out.println("Nota lui " + s1.getPrenume() + " este: " + Student.notaStudent(s1, noteStudenti));
         System.out.println("Nota lui " + s3.getPrenume() + " este: " + Student.notaStudent(s3, noteStudenti));
+        System.out.println("Testare imutabilitate si impartirea listei in 2 jumatati");
+        System.out.println("Lista initiala");
+        listaStudenti.forEach(System.out::println);
+        List<Student> listaImpartita = Student.imparteInFormatiiEgale(listaStudenti, "TI21/1", "TI21/2");
+
+        System.out.println("\nNoua lista");
+        listaImpartita.forEach(System.out::println);
     }
 }

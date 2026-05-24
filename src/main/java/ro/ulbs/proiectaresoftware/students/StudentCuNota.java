@@ -1,7 +1,7 @@
 package ro.ulbs.proiectaresoftware.students;
 
 public class StudentCuNota extends Student {
-    private double nota;
+    private final double nota;
 
     public StudentCuNota(int numarMatricol, String prenume, String nume, String formatieDeStudiu, double nota) {
         super(numarMatricol, prenume, nume, formatieDeStudiu);
@@ -10,6 +10,11 @@ public class StudentCuNota extends Student {
 
     public double getNota() {
         return nota;
+    }
+
+    @Override
+    public StudentCuNota schimbaFormatie(String nouaFormatie) {
+        return new StudentCuNota(this.getNumarMatricol(), this.getPrenume(), this.getNume(), nouaFormatie, this.nota);
     }
 
     @Override
