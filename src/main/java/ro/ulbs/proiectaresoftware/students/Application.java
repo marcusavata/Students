@@ -10,6 +10,8 @@ public class Application {
 
     public static void main(String[] args) {
 
+        Logger.getInstance().info("Aplicatia a pornit cu succes!");
+
         Student s1 = new Student(112, "Ioan", "Popa", "C21/1");
         Student s2 = new Student(112, "Maria", "Oprea", "C23/2");
         Student s3 = new Student(120, "Andrei", "Ghita", "C21/2");
