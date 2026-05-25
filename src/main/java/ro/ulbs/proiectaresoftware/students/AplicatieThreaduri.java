@@ -37,14 +37,36 @@ public class AplicatieThreaduri {
 
     private static void creeazaFisiereTest() {
         try {
-            java.io.PrintWriter w1 = new java.io.PrintWriter(new java.io.FileWriter("input_thread_1.txt"));
+            java.io.PrintWriter w1 = new java.io.PrintWriter(new java.io.FileWriter("input_thread_1.csv"));
             w1.println("100,Vasile,Muresan,TI21");
             w1.println("101,Ana,Gheorghe,TI21");
+
+            java.io.FileWriter csvWriter = new java.io.FileWriter("input_thread_1.csv");
+            csvWriter.append("NumarMatricol");
+            csvWriter.append(",");
+            csvWriter.append("Prenume");
+            csvWriter.append(",");
+            csvWriter.append("Nume");
+            csvWriter.append(",");
+            csvWriter.append("FormatieDeStudiu");
+            csvWriter.append("/n");
+            csvWriter.flush();
             w1.close();
 
             java.io.PrintWriter w2 = new java.io.PrintWriter(new java.io.FileWriter("input_thread_2.txt"));
             w2.println("200,Mihai,Eminescu,ISM11");
             w2.println("201,Ion,Creanga,ISM11");
+
+            java.io.FileWriter csvWriter1 = new java.io.FileWriter("input_thread_2.csv");
+            csvWriter1.append("NumarMatricol");
+            csvWriter1.append(",");
+            csvWriter1.append("Prenume");
+            csvWriter1.append(",");
+            csvWriter1.append("Nume");
+            csvWriter1.append(",");
+            csvWriter1.append("FormatieDeStudiu");
+            csvWriter1.append("/n");
+            csvWriter1.flush();
             w2.close();
         } catch (java.io.IOException e) {
             e.printStackTrace();

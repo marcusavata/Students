@@ -54,7 +54,7 @@ public class Student {
         return String.format("%-5d | %-15s | %-15s | %-10s",
                 numarMatricol, prenume, nume, formatieDeStudiu);
     }
-
+//ex3
     public String toCSV() {
         return numarMatricol + "," + prenume + "," + nume + "," + formatieDeStudiu;
     }

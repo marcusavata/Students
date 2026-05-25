@@ -1,4 +1,4 @@
-100,Vasile,Muresan,TI21
 200,Mihai,Eminescu,ISM11
-101,Ana,Gheorghe,TI21
+100,Vasile,Muresan,TI21
 201,Ion,Creanga,ISM11
+101,Ana,Gheorghe,TI21
